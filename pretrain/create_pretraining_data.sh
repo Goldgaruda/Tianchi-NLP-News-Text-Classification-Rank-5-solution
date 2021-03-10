@@ -1,0 +1,11 @@
+python create_pretraining_data.py \
+	--input_file=../input/sample_text.txt \
+	--output_file=../input/train2.tfrecord \
+	--vocab_file=../input/vocab.txt \
+	--do_lower_case=True \
+	--max_seq_length=256 \
+	--do_whole_word_mask=True \
+	--max_predictions_per_seq=40 \
+	--masked_lm_prob=0.15 \
+	--random_seed=12345 \
+	--dupe_factor=5 > create/log.txt 2>&1 
